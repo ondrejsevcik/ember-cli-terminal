@@ -16,6 +16,7 @@ module.exports = {
   },
 
   _setupExpressEndpoint(expressApp) {
+    console.log('booting up ember-cli-terminal');
     expressApp.get('/terminal', function (req, res) {
       exec(req.query.cmd, (err, stdout, stderr) => {
         if (err) {
